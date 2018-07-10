@@ -107,7 +107,7 @@ export function serverPub(server: Server, topRouter: express.Application): expre
             .replace(/PATH_STR/g, path.basename(pathBase64Str))
             .replace(/PATH_BASE64/g, encodeURIComponent_RFC3986(reqparams.pathBase64))
             .replace(/PREFIX/g,
-            querystring.escape("https://") 
+            querystring.escape("https://")
             + "d2e.dita.digital").replace(/PREFIZ/g,
             "https://"
             + "d2e.dita.digital"));
