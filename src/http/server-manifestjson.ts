@@ -89,11 +89,11 @@ export function serverManifestJson(server: Server, routerPathBase64: express.Rou
             const isCanonical = (req.query as IRequestQueryParams).canonical &&
                 (req.query as IRequestQueryParams).canonical === "true";
 
-            const isSecureHttp = req.secure ||
-                req.protocol === "https" ||
-                req.get("X-Forwarded-Proto") === "https"
-                // (req.headers.host && req.headers.host.indexOf("now.sh") >= 0) ||
-                // (req.hostname && req.hostname.indexOf("now.sh") >= 0)
+            // const isSecureHttp = req.secure ||
+            //     req.protocol === "https" ||
+            //     req.get("X-Forwarded-Proto") === "https"
+            //     // (req.headers.host && req.headers.host.indexOf("now.sh") >= 0) ||
+            //     // (req.hostname && req.hostname.indexOf("now.sh") >= 0)
                 ;
 
             const pathBase64Str = new Buffer(reqparams.pathBase64, "base64").toString("utf8");

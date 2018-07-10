@@ -89,12 +89,12 @@ export function serverPub(server: Server, topRouter: express.Application): expre
         const pathBase64Str = new Buffer(reqparams.pathBase64, "base64").toString("utf8");
         debug(`Publication: ${pathBase64Str}`);
 
-        const isSecureHttp = req.secure ||
-            req.protocol === "https" ||
-            req.get("X-Forwarded-Proto") === "https"
-            // (req.headers.host && req.headers.host.indexOf("now.sh") >= 0) ||
-            // (req.hostname && req.hostname.indexOf("now.sh") >= 0)
-            ;
+        // const isSecureHttp = req.secure ||
+        //     req.protocol === "https" ||
+        //     req.get("X-Forwarded-Proto") === "https"
+        //     // (req.headers.host && req.headers.host.indexOf("now.sh") >= 0) ||
+        //     // (req.hostname && req.hostname.indexOf("now.sh") >= 0)
+        //     ;
 
         // const debug = req.hostname + " -- "
         //     + req.headers.host + " == "
