@@ -135,8 +135,8 @@ export function serverManifestJson(server: Server, routerPathBase64: express.Rou
             // url.parse(req.originalUrl, false).host
             // req.headers.host has port, not req.hostname
 
-            const rootUrl = (isSecureHttp ? "https://" : "http://")
-                + req.headers.host + "/pub/"
+            const rootUrl = "https://"
+                + "d2e.dita.digital" + "/pub/"
                 + (reqparams.lcpPass64 ?
                     (server.lcpBeginToken + encodeURIComponent_RFC3986(reqparams.lcpPass64) + server.lcpEndToken) :
                     "")

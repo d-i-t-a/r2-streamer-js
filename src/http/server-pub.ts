@@ -107,12 +107,10 @@ export function serverPub(server: Server, topRouter: express.Application): expre
             .replace(/PATH_STR/g, path.basename(pathBase64Str))
             .replace(/PATH_BASE64/g, encodeURIComponent_RFC3986(reqparams.pathBase64))
             .replace(/PREFIX/g,
-            (isSecureHttp ?
-                querystring.escape("https://") : querystring.escape("http://"))
-            + req.headers.host).replace(/PREFIZ/g,
-            (isSecureHttp ?
-                "https://" : "http://")
-            + req.headers.host));
+            querystring.escape("https://") 
+            + "d2e.dita.digital").replace(/PREFIZ/g,
+            "https://"
+            + "d2e.dita.digital"));
     });
 
     topRouter.use("/pub", routerPathBase64);
