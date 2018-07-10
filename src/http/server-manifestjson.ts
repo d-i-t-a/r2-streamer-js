@@ -94,7 +94,7 @@ export function serverManifestJson(server: Server, routerPathBase64: express.Rou
             //     req.get("X-Forwarded-Proto") === "https"
             //     // (req.headers.host && req.headers.host.indexOf("now.sh") >= 0) ||
             //     // (req.hostname && req.hostname.indexOf("now.sh") >= 0)
-                ;
+            //     ;
 
             const pathBase64Str = new Buffer(reqparams.pathBase64, "base64").toString("utf8");
 
