@@ -259,17 +259,9 @@ export class Server {
                     + "</strong><br> => <a href='./pub/" + encodeURIComponent_RFC3986(filePathBase64)
                     + "'>" + "./pub/" + filePathBase64 + "</a></p>";
             });
-            if (!this.disableOPDS) {
-                html += "<h1>OPDS2 feed</h1><p><a href='./opds2'>CLICK HERE</a></p>";
-            }
             if (!this.disableRemotePubUrl) {
                 html += "<h1>Load HTTP publication URL</h1><p><a href='./url'>CLICK HERE</a></p>";
             }
-            if (!this.disableOPDS) {
-                html += "<h1>Browse HTTP OPDS1 feed</h1><p><a href='./opds'>CLICK HERE</a></p>";
-                html += "<h1>Convert OPDS feed v1 to v2</h1><p><a href='./opds12'>CLICK HERE</a></p>";
-            }
-            html += "<h1>Server version</h1><p><a href='./version/show'>CLICK HERE</a></p>";
             html += "</body></html>";
 
             res.status(200).send(html);
