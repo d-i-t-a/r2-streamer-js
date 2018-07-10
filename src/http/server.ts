@@ -243,8 +243,8 @@ export class Server {
         };
 
         if (!this.disableReaders) {
-            this.expressApp.use("/readerNYPL", express.static("misc/readers/reader-NYPL", staticOptions));
-            this.expressApp.use("/readerHADRIEN", express.static("misc/readers/reader-HADRIEN", staticOptions));
+            this.expressApp.use("/reader", express.static("misc/readers/reader", staticOptions));
+            this.expressApp.use("/r1", express.static("misc/readers/r1", staticOptions));
         }
 
         this.expressApp.get("/", (_req: express.Request, res: express.Response) => {
